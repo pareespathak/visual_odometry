@@ -40,4 +40,14 @@ Visual odometry(VO) is the process of determining the position and orientation o
    4) Concatenate transformation.
    4) Triangulate all new feature matches between the two frames and obtain point cloud.
    5) Iterate the process.  
-   6) Update reference frame when sufficient number of features were not tracked, and repeat the process.
+   6) Update reference frame when sufficient number of features were not tracked, and repeat the process.  
+   
+### Literature:  
+visual odometry pipeline : https://www.ifi.uzh.ch/dam/jcr:5759a719-55db-4930-8051-4cc534f812b1/VO_Part_I_Scaramuzza.pdf  
+
+## Results 2D-2D:  
+KITTI sample dataset (Feature Matching) <img src="results/2d-2d-matching.png" heigth="10"> | KITTI 05 dataset (Matching)<img src="results/2d-2d_matching_05.png"> | Video trajectory (Matching)<img src="results/2d-2d-video-matching.png"> 
+--------------------------------------------------------|----------------------------------|------------------
+KITTI sample dataset (Feature Tracking) <img src="results/2d-2d-tracking(H)_sample_dataset.png">  |  KITTI 05 dataset (Tracking)<img src="results/2d-2d-tracking(H)_05_dataset.png"> | Video trajectory (Tracking)<img src="results/2d-2d-video-homo.png">
+
+## Results 3D-2D with Reprojection error plots :  
