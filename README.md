@@ -50,4 +50,11 @@ KITTI sample dataset (Feature Matching) <img src="results/2d-2d-matching.png" he
 --------------------------------------------------------|----------------------------------|------------------
 KITTI sample dataset (Feature Tracking) <img src="results/2d-2d-tracking(H)_sample_dataset.png">  |  KITTI 05 dataset (Tracking)<img src="results/2d-2d-tracking(H)_05_dataset.png"> | Video trajectory (Tracking)<img src="results/2d-2d-video-homo.png">
 
-## Results 3D-2D with Reprojection error plots :  
+## Results 3D-2D with Reprojection error plots : 
+KITTI sample dataset <img src="results/3d-2d-basic.png" heigth="10"> | Reprojection error <img src="results/reprojection_error_3d-2d_sample.png" >  
+--------------------------------------------------------|----------------------------------
+KITTI 05 dataset <img src="results/3d-2d-05.png"> |<img src="results/reprojection_error_3d-2d_05.png">  
+|Video trajectory <img src="results/3d-2d-video.png"> | <img src="results/reprojection_error_3d-2d_video.png">
+
+
+
