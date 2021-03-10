@@ -13,9 +13,9 @@ Visual odometry(VO) is the process of determining the position and orientation o
 * 2D-2D Motion Estimation using Optical Flow Method. 
 ## Algorithms:  
 ### 2D-2D Motion Estimation(Feature matching):  
-1) First image(I1) and Second image(I2) was Captured and Features were computed in both images using sift Feature Detector.  
+1) First image(I<sub>1</sub>) and Second image(I<sub>2</sub>) was Captured and Features were computed in both images using sift Feature Detector.  
 2) Corresponding features were matched using FlannBasedMatcher and accuracy was maintained using ratio test.    
-3) Using matched features essential matrix for image pair I1, I2 was computed.
+3) Using matched features essential matrix for image pair I<sub>1</sub>, I<sub>2</sub> was computed.
 4) Decompose an essential matrix into a rotation matrix and a translation matrix.  
 5) 3D Point cloud was computed by triangulating the image pair.
 6) Repeat the process and compute point cloud for the next corresponding image pair.  
@@ -23,22 +23,22 @@ Visual odometry(VO) is the process of determining the position and orientation o
 8) Concatenate transformation and repeat the process.  
 Reference code : [2D-2D Feature Matching](https://github.com/pareespathak/visual_odometry/blob/main/codes/2d-2d_feature_matching.py) 
 ### 2D-2D Motion Estimation(Feature tracking):  
-1) First image(I1) and Second image(I2) was Captured and Features were computed in the First image using the shi-Tomasi corner detector.  
-2) Features of I1 were tracked in I2 using Lucas Kanade optical flow method.  
+1) First image(I<sub>1</sub>) and Second image(I<sub>2</sub>) was Captured and Features were computed in the First image using the shi-Tomasi corner detector.  
+2) Features of I<sub>1</sub> were tracked in I<sub>2</sub> using Lucas Kanade optical flow method.  
 3) Calculate tracked features calculate essential, rotation matrix, translation matrix, and relative scale between images as explained above.  
 4) Track features in the next frames and concatenates transformation.  
 5) Update the reference frame when a sufficient number of features were not tracked and repeat the process.  
 Reference code : [2D-2D Feature Matching](https://github.com/pareespathak/visual_odometry/blob/main/codes/2d-2d_feature_tracking_homo.py) 
 ### 3D-2D Motion Estimation:  
 * Do only once:  
-   1) Capture two frames I1, I2 and extract feature from first image(I1)  
-   2) Track features of I1 in I2 using Lucas Kanade optical flow method. 
-   3) Compute essential matrix and triangulate features from I2, I1 to get point 3D cloud.  
+   1) Capture two frames I<sub>1</sub>, I<sub>2</sub> and extract feature from first image(I<sub>1</sub>)  
+   2) Track features of I<sub>1</sub> in I<sub>2</sub> using Lucas Kanade optical flow method. 
+   3) Compute essential matrix and triangulate features from I<sub>2</sub>, I<sub>1</sub> to get point 3D cloud.  
    
 * Do at each iteration:
    1) Capture a new frame.  
    2) Track features of the previous frame in the new frame using Lucas Kanade optical flow method.  
-   3) Compute camera pose using Perspective-n-Point algorithm(PnP) from 3-D(point cloud)-to-2-D(corresponding tracked features).
+   3) Compute camera pose using Perspective-n-Point algorithm(PnP) from 3-D(point cloud) to 2-D(corresponding tracked features).
    4) Concatenate transformation.
    4) Triangulate all-new feature matches between the two frames and obtain point cloud.
    5) Iterate the process.  
