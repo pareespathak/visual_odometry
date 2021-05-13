@@ -28,7 +28,7 @@ Reference code : [2D-2D Feature Matching](https://github.com/pareespathak/visual
 3) Calculate tracked features calculate essential, rotation matrix, translation matrix, and relative scale between images as explained above.  
 4) Track features in the next frames and concatenates transformation.  
 5) Update the reference frame when a sufficient number of features were not tracked and repeat the process.  
-Reference code : [2D-2D Feature Matching](https://github.com/pareespathak/visual_odometry/blob/main/codes/2d-2d_feature_tracking_homo.py) 
+Reference code : [2D-2D Feature Tracking](https://github.com/pareespathak/visual_odometry/blob/main/codes/2d-2d_feature_tracking_homo.py) 
 ### 3D-2D Motion Estimation:  
 * Do only once:  
    1) Capture two frames **I<sub>1</sub>**, **I<sub>2</sub>** and extract feature from first image(**I<sub>1</sub>**)  
