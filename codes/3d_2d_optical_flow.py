@@ -73,6 +73,7 @@ def triangulaion(R,t,pt1,pt2,k):
     ch2 = pt2.transpose()
     cloud = cv.triangulatePoints(pr_mat,P1,ch1,ch2)
     cloud = cloud[:4,:]
+    # converting 4D homogeneous coordinates to 3D coordinates 
     div  = cloud[3,:] + 1e-8
     cloud = cloud / div
     #print(cloud)
