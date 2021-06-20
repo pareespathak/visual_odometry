@@ -8,8 +8,10 @@ import os
 importing images from folder
 '''
 
-path = 'C:\\aa\\visual_odometry\\project\\KITTI_sample'      # path of the image folder
-p = os.path.join(path, "images")                             # image folder name
+#path = 'C:\\aa\\visual_odometry\\project\\KITTI_sample'      # path of the image folder
+path = 'visual_odometry'
+#p = os.path.join(path, "images")                             # image folder name
+p = os.path.join(path, "dataset")                             # image folder name
 images = []
 for img in os.listdir(p):
     image = cv.imread(os.path.join(p, img), cv.IMREAD_GRAYSCALE)
@@ -23,6 +25,8 @@ k =np.array([[7.188560000000e+02, 0.000000000000e+00, 6.071928000000e+02],
 
 '''
 #importing video as image frames
+
+#On board dataset
 
 cap = cv.VideoCapture('C:\\aa\\visual_odometry\\project\\L_shaped_path.avi')   #folder location and video name.format
 ret, old_frame = cap.read()
