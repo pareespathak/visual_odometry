@@ -6,8 +6,10 @@ import os
 
 #importing images from folder
 
-path = 'C:\\aa\\visual_odometry\\project\\KITTI_sample'
-p = os.path.join(path, "image_0")
+#path = 'C:\\aa\\visual_odometry\\project\\KITTI_sample'
+#p = os.path.join(path, "image_0")
+path = 'visual_odometry'
+p = os.path.join(path, "dataset")
 images = []
 for img in os.listdir(p):
     image = cv.imread(os.path.join(p, img), cv.IMREAD_GRAYSCALE)
@@ -158,16 +160,5 @@ plt.plot(x,z,color='green',label = "plotted trajectory")
 plt.legend()
 plt.title("Results: 2d-2d_tracking_KITTI_05_Dataset")
 plt.show()
-#plt.savefig('2d-2d-euc.png')
-
-
-
-
-
-
-
-
-
-
-
-#cv.destroyAllWindows()
+plt.savefig('2d-2d-euc.png')
+cv.destroyAllWindows()
