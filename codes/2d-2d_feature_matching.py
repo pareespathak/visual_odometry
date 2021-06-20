@@ -162,7 +162,8 @@ x_truth = []
 z_truth = []
 
 # ground truth using pose doc
-ground_truth = np.loadtxt('C:\\aa\\visual_odometry\\project\\KITTI_sample\\poses.txt')  #path of ground truth 
+#ground_truth = np.loadtxt('C:\\aa\\visual_odometry\\project\\KITTI_sample\\poses.txt')  #path of ground truth 
+ground_truth = np.loadtxt('visual_odometry\\codes\\poses.txt')
 x_truth=[]
 z_truth=[]
 for i in range(150):
