@@ -146,7 +146,8 @@ for j in range(1,250):
         c1 = corners(images[j])
 
 # ground truth using pose doc
-ground_truth = np.loadtxt('C:\\aa\\visual_odometry\\project\\KITTI_sample\\poses05.txt')
+#ground_truth = np.loadtxt('C:\\aa\\visual_odometry\\project\\KITTI_sample\\poses05.txt')
+ground_truth = np.loadtxt('visual_odometry\\codes\\poses.txt')
 x_truth=[]
 z_truth=[]
 for i in range(250):
