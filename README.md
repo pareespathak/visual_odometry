@@ -1,6 +1,13 @@
 # Monoculor Visual Odometry
 ## Introduction:  
 Visual odometry(**VO**) is the process of determining the position and orientation of a robot by analyzing the associated camera images. The project is designed to estimate the motion of calibrated camera mounted over a mobile platform. Motion is estimated by computing the feature points of the image and determining the relative translation and rotation of the images.
+## How to use 
+`git clone https://github.com/pareespathak/visual_odometry.git`  
+`pip3 install -r requirements.txt`  
+`cd codes`  
+`python 2d-2d_feature_tracking_homo.py`  
+for 3D-2D approach  
+`python 3d_2d_optical_flow.py`
 ## Visual odometry pipeline: 
 1 Image sequences  
 2 Feature Detection  
