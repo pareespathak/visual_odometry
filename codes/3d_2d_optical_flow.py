@@ -6,8 +6,11 @@ import os
 
 #importing images from folder
 images = []
-path = 'C:\\aa\\visual_odometry\\project\\KITTI_sample'         # path of the image folder
-p = os.path.join(path, "image_0")                               # image folder name
+#path = 'C:\\aa\\visual_odometry\\project\\KITTI_sample'         # path of the image folder
+#p = os.path.join(path, "image_0")                               # image folder name
+path = 'visual_odometry'
+p = os.path.join(path, "dataset")
+
 images = []
 
 # taking images from folder #
@@ -218,7 +221,8 @@ for i in range(1,200):
 #print("sum", loop+i)
 
 # ground truth using pose doc
-ground_truth = np.loadtxt('C:\\aa\\visual_odometry\\project\\KITTI_sample\\poses05.txt')  #path and text format
+#ground_truth = np.loadtxt('C:\\aa\\visual_odometry\\project\\KITTI_sample\\poses05.txt')  #path and text format
+ground_truth = np.loadtxt('visual_odometry\\codes\\poses.txt')
 x_truth=[]
 z_truth=[]
 for i in range(200):
